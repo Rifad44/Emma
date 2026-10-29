@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sofia AI Chat</title>
+<style>
+:root{--bg:#100d1c;--panel:#1d1830;--panel2:#28203d;--pink:#e83d9a;--purple:#7b4cff;--muted:#b8afca;--green:#4de0b2}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#302047 0,#100d1c 48%,#0b0912 100%);font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#fff;min-height:100vh}.app{max-width:1050px;margin:auto;min-height:100vh;display:grid;grid-template-columns:330px 1fr;gap:18px;padding:20px}.side,.chat{background:rgba(29,24,48,.95);border:1px solid #3b3154;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px #0003}.side{padding:25px 22px;display:flex;flex-direction:column;align-items:center;text-align:center}.avatar{width:136px;height:136px;border-radius:50%;object-fit:cover;border:4px solid #9b55ed;box-shadow:0 0 30px #8b3ee755}.status{color:var(--green);font-size:13px;margin-top:13px}.name{font-size:27px;font-weight:750;margin:8px 0 4px}.sub{color:var(--muted);font-size:14px}.lock{margin-top:25px;border:1px solid #57416e;background:#302440;border-radius:15px;padding:16px;width:100%;font-weight:700}.lock small{display:block;color:var(--muted);font-weight:400;margin-top:7px}.ad{margin-top:auto;padding-top:28px;width:100%}.ad a{display:block;background:linear-gradient(110deg,var(--pink),var(--purple));padding:13px;border-radius:13px;color:white;text-decoration:none;font-weight:700}.ad p{font-size:11px;color:var(--muted);line-height:1.5}.chat{display:flex;flex-direction:column;min-height:650px}.top{padding:20px 24px;border-bottom:1px solid #3b3154;display:flex;align-items:center;gap:12px}.mini{width:43px;height:43px;object-fit:cover;border-radius:50%}.top strong{display:block}.top span{font-size:12px;color:var(--green)}.messages{padding:24px;flex:1;display:flex;flex-direction:column;gap:14px;overflow:auto;max-height:65vh}.bubble{max-width:82%;padding:13px 16px;border-radius:17px;line-height:1.55;font-size:15px;white-space:pre-wrap}.bot{align-self:flex-start;background:#302741;border-bottom-left-radius:5px}.user{align-self:flex-end;background:linear-gradient(120deg,#853be0,#d9389b);border-bottom-right-radius:5px}.composer{display:flex;gap:10px;padding:17px;border-top:1px solid #3b3154}.composer input{min-width:0;flex:1;background:#100d1c;color:white;border:1px solid #514467;border-radius:14px;padding:14px;font:inherit;outline:none}.composer input:focus{border-color:#a76cff}.composer button{border:0;border-radius:14px;padding:0 20px;color:white;background:linear-gradient(120deg,#853be0,#d9389b);font-weight:700;font-size:15px;cursor:pointer}.notice{text-align:center;color:#9f96b3;font-size:11px;padding:0 15px 13px}.callbtn{margin-top:12px;width:100%;border:0;background:#4a3b5b;color:#d2c9df;padding:13px;border-radius:13px;font-weight:700;cursor:not-allowed}.callbtn:disabled{opacity:.9}@media(max-width:720px){.app{grid-template-columns:1fr;padding:10px;gap:12px}.side{padding:18px}.avatar{width:94px;height:94px}.name{font-size:23px}.lock{margin-top:15px}.ad{padding-top:15px}.chat{min-height:55vh}.messages{max-height:52vh;padding:16px}.top{padding:15px}.bubble{max-width:90%}.composer{padding:12px}.composer button{padding:0 15px}}
+</style></head>
+<body><main class="app">
+<aside class="side">
+<img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=85" alt="কাল্পনিক AI চরিত্রের ছবি">
+<div class="status">● অনলাইন</div><div class="name">Sofia</div><div class="sub">AI সঙ্গী · এখন চ্যাট করতে পারো</div>
+<div class="lock">🔒 ভিডিও কল <small>ভিডিও কল বর্তমানে বন্ধ আছে</small></div>
+<button class="callbtn" disabled>🔒 ভিডিও কল লক</button>
+<div class="ad"><a id="smartLink" href="#" target="_blank" rel="noopener noreferrer">চ্যাট চালিয়ে যাও</a><p>এটি বিজ্ঞাপন/স্মার্ট লিংকের জন্য নমুনা স্থান। আপনার অনুমোদিত বিজ্ঞাপন নেটওয়ার্কের লিংক বসান।</p></div>
+</aside>
+<section class="chat"><header class="top"><img class="mini" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt=""><div><strong>Sofia AI</strong><span>● AI চ্যাট</span></div></header>
+<div class="messages" id="messages"><div class="bubble bot">হাই! 😊 আমি Sofia, একটি AI চরিত্র। কী নিয়ে কথা বলতে চাও?</div></div>
+<form class="composer" id="form"><input id="input" autocomplete="off" placeholder="এখানে মেসেজ লিখো…" aria-label="মেসেজ লিখুন"><button type="submit">পাঠাও ➤</button></form><div class="notice">তুমি একটি AI-এর সঙ্গে কথা বলছ, বাস্তব কোনো ব্যক্তির সঙ্গে নয়।</div></section>
+</main>
+<script>
+// ডেমো চ্যাট: এটি এখনো কোনো বাহ্যিক AI সার্ভিসের সঙ্গে যুক্ত নয়।
+const messages=document.getElementById('messages'),form=document.getElementById('form'),input=document.getElementById('input');
+const replies=["বুঝলাম 😊 আরেকটু বলো!","সেটা বেশ মজার। তোমার দিনটা কেমন যাচ্ছে?","আমি শুনছি—তুমি কী ভাবছ?","আচ্ছা 😊 এই বিষয়ে তোমার সবচেয়ে ভালো লাগার অংশ কোনটা?","তোমার কথা বুঝতে চেষ্টা করছি। আরও একটু বলবে?"];
+form.addEventListener('submit',e=>{e.preventDefault();const value=input.value.trim();if(!value)return;add(value,'user');input.value='';setTimeout(()=>add(replies[Math.floor(Math.random()*replies.length)],'bot'),450)});
+function add(text,kind){const el=document.createElement('div');el.className='bubble '+kind;el.textContent=text;messages.appendChild(el);messages.scrollTop=messages.scrollHeight;}
+// এখানে আপনার বিজ্ঞাপন নেটওয়ার্কের অনুমোদিত Smart Link URL বসান।
+const SMART_LINK_URL='';if(SMART_LINK_URL)document.getElementById('smartLink').href=SMART_LINK_URL;else document.getElementById('smartLink').addEventListener('click',e=>{e.preventDefault();alert('প্রথমে কোডে SMART_LINK_URL-এর জায়গায় আপনার বিজ্ঞাপন নেটওয়ার্কের লিংক বসান।')});
+</script></body></html>
