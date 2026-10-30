@@ -19,11 +19,11 @@
 <form class="composer" id="form"><input id="input" autocomplete="off" placeholder="এখানে মেসেজ লিখো…" aria-label="মেসেজ লিখুন"><button type="submit">পাঠাও ➤</button></form><div class="notice">তুমি একটি AI-এর সঙ্গে কথা বলছ, বাস্তব কোনো ব্যক্তির সঙ্গে নয়।</div></section>
 </main>
 <script>
-// ডেমো চ্যাট: এটি এখনো কোনো বাহ্যিক AI সার্ভিসের সঙ্গে যুক্ত নয়।
+// ডেমো চ্যাট: এটি এখনো কোনো বাহ্যিক Emma সার্ভিসের সঙ্গে যুক্ত নয়।
 const messages=document.getElementById('messages'),form=document.getElementById('form'),input=document.getElementById('input');
 const replies=["বুঝলাম 😊 আরেকটু বলো!","সেটা বেশ মজার। তোমার দিনটা কেমন যাচ্ছে?","আমি শুনছি—তুমি কী ভাবছ?","আচ্ছা 😊 এই বিষয়ে তোমার সবচেয়ে ভালো লাগার অংশ কোনটা?","তোমার কথা বুঝতে চেষ্টা করছি। আরও একটু বলবে?"];
 form.addEventListener('submit',e=>{e.preventDefault();const value=input.value.trim();if(!value)return;add(value,'user');input.value='';setTimeout(()=>add(replies[Math.floor(Math.random()*replies.length)],'bot'),450)});
 function add(text,kind){const el=document.createElement('div');el.className='bubble '+kind;el.textContent=text;messages.appendChild(el);messages.scrollTop=messages.scrollHeight;}
 // এখানে আপনার বিজ্ঞাপন নেটওয়ার্কের অনুমোদিত Smart Link URL বসান।
-const SMART_LINK_URL='';if(SMART_LINK_URL)document.getElementById('smartLink').href=SMART_LINK_URL;else document.getElementById('smartLink').addEventListener('click',e=>{e.preventDefault();alert('প্রথমে কোডে SMART_LINK_URL-এর জায়গায় আপনার বিজ্ঞাপন নেটওয়ার্কের লিংক বসান।')});
+const SMART_LINK_URL='';if(SMART_LINK_URLhttps://www.profitableratecpmnetwork.com/ikp9jsn4m?key=105daaefd32978f6e6a1599211006420.href=SMART_LINK_URLhttps://www.profitableratecpmnetwork.com/emyuw33ktu?key=a5e909ec7cec99f8343d63df7fc2501a
 </script></body></html>
